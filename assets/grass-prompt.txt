@@ -1,0 +1,4 @@
+Use case: photorealistic-natural.
+Asset type: photographic grass texture for a football pitch on a website.
+Create a seamless-looking top-down photograph of real, impeccably maintained professional football pitch turf. The grass is cut very short with densely packed natural fine blades, healthy medium-rich green, realistic tiny variations in greens, slight natural imperfections but absolutely no bald patches. Soft overcast daylight, even lighting across the whole frame, no shadows.
+Entire landscape frame filled edge to edge with grass. No field lines, no goal, no objects, no people, no stands, no horizon, no perspective, no text, no logos, no graphic illustration. This must look like REAL GRASS photographed from above at enough distance that individual blades are tiny; not a close-up macro and not smooth flat green. No checkerboard, no mowing stripes, no strong gradients. A neutral grass surface that can be projected onto a three-dimensional football half-pitch.

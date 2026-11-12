@@ -1,0 +1,43 @@
+/* Profile scouting scores: one five-star scale with half-star precision. */
+.profile-rating-stars{display:inline-flex;align-items:center;gap:3px;color:#b48a49;line-height:1;vertical-align:middle;white-space:nowrap;flex-shrink:0}
+.profile-rating-stars .potential-star{width:15px;height:15px}
+.profile-rating-stars .potential-star-outline{stroke:#cfc6b8;opacity:.85}
+.profile-rating-stars.current,.profile-rating-stars.attribute-stars{color:var(--wine)}
+.profile-rating-stars.current .potential-star-outline,.profile-rating-stars.attribute-stars .potential-star-outline{stroke:#d9c8ce}
+.profile-scores .score-pair{display:flex;flex-direction:column;gap:9px;width:100%}
+.profile-scores .score-box{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 10px;text-align:left}
+.profile-scores .score-box small{font-size:7px;line-height:1.5;letter-spacing:.08em;margin:0;flex-shrink:0}
+.profile-scores .score-box.potential{background:#faf5ec;border-color:#ece0ca}
+.profile-scores .score-box.potential small{color:#9c835d}
+.profile-columns .attribute-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0;padding:10px 0;border-bottom:1px solid #f0edeb;min-height:37px}
+.profile-columns .attribute-row:last-of-type{border-bottom:0}
+.profile-columns .attribute-row>.attribute-name{width:auto;min-width:0;font-size:11px;color:#716970;flex:1}
+.profile-columns .attribute-row>.profile-rating-stars{width:auto;flex-shrink:0}
+.profile-rating-stars.attribute-stars{gap:5px}
+.profile-rating-stars.attribute-stars .potential-star{width:16px;height:16px}
+.profile-columns .attribute-footnote{margin-top:14px}
+@media(max-width:980px){
+ .profile-scores .score-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px;flex:1;min-width:320px;gap:10px}
+ .profile-scores .score-box{padding:12px}
+}
+@media(max-width:680px){
+ .profile-scores{gap:12px;padding:14px;flex-wrap:wrap}
+ .profile-scores .score-pair{width:100%;max-width:none;flex-basis:100%;min-width:0;gap:10px}
+ .profile-scores .score-box{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;padding:13px 8px}
+ .profile-scores .score-box small{font-size:7px;line-height:1.4}
+ .profile-scores .score-box small br{display:none}
+ .profile-scores .button{max-width:none;width:100%;margin:0;min-height:36px}
+ .profile-columns .attribute-row>.attribute-name{font-size:11px}
+}
+
+/* The player pool and favourites use the same potential stars as each profile. */
+.potential-badge{flex-direction:column;align-items:flex-start;gap:4px;padding:7px 9px}
+.potential-badge .catalog-potential{gap:2px}
+.potential-badge .catalog-potential .potential-star{width:12px;height:12px}
+.potential-badge small{font-size:6px;line-height:1.3;letter-spacing:.45px;color:#9b876a}
+@media(max-width:680px){
+ .potential-badge{gap:3px;padding:6px;right:7px}
+ .potential-badge .catalog-potential{gap:1.5px}
+ .potential-badge .catalog-potential .potential-star{width:10px;height:10px}
+ .potential-badge small{font-size:5px;letter-spacing:.35px}
+}

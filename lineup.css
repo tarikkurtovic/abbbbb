@@ -1,0 +1,74 @@
+/* Full-width white half-pitch, matching the supplied side-view sketch. */
+body:has(.xi-home){background:#fff}
+main:has(.xi-home){width:100%;max-width:none;padding:25px clamp(16px,2vw,40px) 30px;min-height:0;background:#fff}
+.xi-home{padding:0}
+.broadcast-page-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:14px}
+.broadcast-page-heading h1{font-family:Barlow,Impact,sans-serif;font-size:36px;line-height:1.1;letter-spacing:.2px}
+.broadcast-page-heading h1>span{color:var(--wine)}
+.broadcast-page-heading p{font-size:10px;color:#9a9296;margin-top:6px}
+.broadcast-heading-actions{display:flex;align-items:center;gap:25px}
+.broadcast-heading-actions .text-link{font-size:10px}
+.broadcast-formation{font-size:10px;letter-spacing:1.3px;font-weight:700;color:#81767a}
+.broadcast-stage,.broadcast-scroll{width:100%}
+.broadcast-scroll{overflow:visible;background:#fff}
+.lineup-pitch{position:relative;width:100%;aspect-ratio:2.2;background:#fff;isolation:isolate;container-type:inline-size}
+.pitch-markings{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;user-select:none}
+.lineup-cards{position:absolute;inset:0}
+/* Every card has exactly the same width and height, at every position. */
+.lineup-slot{position:absolute;left:calc(var(--x)*1%);top:calc(var(--y)*1%);width:7.2%;transform:translate(-50%,-100%);z-index:2;filter:drop-shadow(1px 4px 5px #302b2d15)}
+.lineup-slot:hover,.lineup-slot:focus-within{z-index:10}
+.lineup-shadow{position:absolute;left:6%;right:6%;bottom:-3%;height:8%;border-radius:50%;background:radial-gradient(ellipse,#4f324230,transparent 70%);pointer-events:none}
+.lineup-card{display:block;position:relative;width:100%;aspect-ratio:.73;background:linear-gradient(130deg,#b86571,#6b3348 43%,#a56671 80%,#70384e);clip-path:polygon(0 10%,19% 9%,35% 2%,50% 5%,65% 2%,81% 9%,100% 10%,100% 94%,91% 98%,50% 100%,9% 98%,0 94%);translate:0 0;transition:translate .3s cubic-bezier(.2,.65,.25,1),filter .15s;animation:card-float 6s ease-in-out infinite;will-change:transform,translate}
+.lineup-card:hover{filter:brightness(1.14)}
+.lineup-card-inner{position:absolute;inset:1.5px;background:linear-gradient(135deg,#171123,#171329 65%,#101019);clip-path:polygon(0 10%,19% 9%,35% 2%,50% 5%,65% 2%,81% 9%,100% 10%,100% 94%,91% 98%,50% 100%,9% 98%,0 94%);overflow:hidden}
+.lineup-card-geometry{position:absolute;width:75%;height:55%;right:-15%;top:15%;background:#353143;clip-path:polygon(0 0,100% 100%,15% 100%)}
+.lineup-card-geometry:after{content:'';position:absolute;inset:35% 0 0;background:#242034;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.lineup-position{position:absolute;left:9%;top:17%;font-family:Barlow,Impact,sans-serif;font-size:1.4cqw;line-height:1;color:white;z-index:3;text-shadow:0 1px 3px #0004}
+.lineup-card-brand{position:absolute;top:10%;left:45%;font-size:.32cqw;font-weight:800;letter-spacing:.06cqw;color:#b97488;z-index:3}
+.lineup-face{position:absolute;top:17%;left:-10%;width:120%;aspect-ratio:1;background-image:url('assets/players.png');background-size:300% 200%;background-repeat:no-repeat;z-index:1}
+.lineup-card-shade{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#13101b35 30%,#111019 72%);z-index:2}
+.lineup-identity{position:absolute;left:4%;right:4%;bottom:7%;text-align:center;color:white;z-index:3}
+.lineup-identity>strong{font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:1.03cqw;line-height:1.1;letter-spacing:.02cqw;text-transform:uppercase;white-space:nowrap;display:block}
+.lineup-card-footer{display:flex;justify-content:center;align-items:center;gap:.36cqw;margin-top:.28cqw;font-size:.32cqw;line-height:1;color:#dabfa5}
+.lineup-card-footer .flag{width:.72cqw;height:.48cqw}
+.lineup-potential{display:inline-flex;align-items:center;gap:.06cqw;color:#e4c38a}
+.potential-star{position:relative;display:inline-block;width:.65cqw;height:.65cqw;flex-shrink:0}
+.potential-star .icon{position:absolute;inset:0;width:100%;height:100%;stroke-width:1.2}
+.potential-star-outline{stroke:#c7af86;opacity:.5}
+.potential-star-fill{fill:currentColor;stroke:currentColor;clip-path:inset(0 calc(100% - var(--star-fill)) 0 0)}
+.lineup-save{position:absolute;right:-8px;top:12%;z-index:12;width:24px;height:24px;border:1px solid #c39ea955;border-radius:50%;background:#191322;color:#e3c0a0;display:grid;place-items:center;opacity:0}
+.lineup-save .icon{width:11px;height:11px;stroke-width:1.5}
+.lineup-save.saved .icon{fill:#e3c0a0}
+.lineup-slot:hover .lineup-save,.lineup-slot:focus-within .lineup-save{opacity:1}
+.lineup-card:focus-visible{filter:brightness(1.3)}
+.broadcast-caption{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:15px 0 0;color:#a59b9f;font-size:9px}
+.broadcast-caption>span:first-child{font-size:8px;letter-spacing:1px;color:#8f828a}
+.broadcast-caption i{font-style:normal;padding:0 5px;color:#c5bdbf}
+.lineup-shadow{animation:shadow-float 6s ease-in-out infinite;scale:1;filter:opacity(1);transition:scale .3s ease,filter .3s ease}
+/* Pause at the current floating phase, then lift smoothly with a separate transform. */
+.lineup-slot:hover .lineup-card,.lineup-slot:has(:focus-visible) .lineup-card{animation-play-state:paused;translate:0 calc(-1 * clamp(8px,1.1cqw,18px))}
+.lineup-slot:hover .lineup-shadow,.lineup-slot:has(:focus-visible) .lineup-shadow{animation-play-state:paused;scale:.78;filter:opacity(.5)}
+@keyframes card-float{0%,100%{transform:translateY(0)}50%{transform:translateY(calc(-1 * min(5px,.35cqw)))}}
+@keyframes shadow-float{0%,100%{transform:scale(1);opacity:.65}50%{transform:scale(.86);opacity:.3}}
+@media(prefers-reduced-motion:reduce){.lineup-card,.lineup-shadow{animation:none;transition:none;will-change:auto}}
+@media(max-width:760px){
+ main:has(.xi-home){padding:22px 16px 25px}
+ .broadcast-page-heading h1{font-size:31px}
+ .broadcast-heading-actions{gap:17px}
+ .broadcast-heading-actions .text-link,.broadcast-formation{font-size:8px}
+ .lineup-pitch{aspect-ratio:1.75}
+ .lineup-card-inner{inset:1px}
+ .lineup-save{width:20px;height:20px;right:-8px}
+ .broadcast-caption{font-size:7px;gap:10px}
+ .broadcast-caption>span:first-child{font-size:6px}
+}
+@media(max-width:480px){
+ .broadcast-page-heading{gap:10px}
+ .broadcast-heading-actions{gap:10px}
+ .broadcast-heading-actions .text-link{font-size:7px;gap:4px}
+ .broadcast-heading-actions .text-link .icon{width:12px;height:12px}
+ .broadcast-formation{font-size:7px}
+ .broadcast-page-heading h1{font-size:29px}
+ .broadcast-page-heading p{font-size:8px}
+ .broadcast-caption{font-size:6px}
+}

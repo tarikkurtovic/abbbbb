@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#831b2d">
+  <meta name="description" content="Find a hidden talent. A football scouting UI concept with fictional young players, profiles and comparisons.">
+  <title>Hidden Talent — Find the next generation</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lineup.css?v=20261112-positions-stars">
+  <link rel="stylesheet" href="ratings.css?v=20261112-catalog-stars">
+  <script src="app.js?v=20261112-catalog-stars-2" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="6" height="6" rx="1"/><rect x="14.5" y="3.5" width="6" height="6" rx="1"/><rect x="3.5" y="14.5" width="6" height="6" rx="1"/><rect x="14.5" y="14.5" width="6" height="6" rx="1"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="7.5" r="3.5"/><path d="M2.5 21v-3a6.5 6.5 0 0 1 13 0v3M16 4a3.5 3.5 0 0 1 0 7m2 3a6 6 0 0 1 3.5 5.5V21"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M5 9a7 7 0 0 1 14 0v5l2 3H3l2-3ZM9 21h6"/></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 6h18M3 18h18M8 3v6m8 6v6"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="18" r="2"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 5h12M9 12h12M9 19h12M3 5h1M3 12h1M3 19h1"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-10M15 5h6v6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 8 4 3-1.5 5h-5L8 11ZM12 3v5m8 0-4 3m2 8-3.5-3M6 19l3.5-3M4 8l4 3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Hidden Talent home"><span class="brand-mark">h<span>t</span><i></i></span><span>HIDDEN<span class="brand-light">TALENT</span><small>SEE THE POTENTIAL.</small></span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" data-nav="home"><svg class="icon"><use href="#i-grid"/></svg>Discover</a>
+        <a href="#players" data-nav="players"><svg class="icon"><use href="#i-people"/></svg>Players</a>
+        <a href="#compare" data-nav="compare"><svg class="icon"><use href="#i-compare"/></svg>Compare</a>
+        <a href="#favourites" data-nav="favourites"><svg class="icon"><use href="#i-star"/></svg>Favourites<span class="nav-count">3</span></a>
+      </nav>
+      <div class="header-tools"><span class="demo-tag"><i></i>SCOUTING PREVIEW</span><button class="icon-button notification-button" aria-label="View notifications" data-action="notifications"><svg class="icon"><use href="#i-bell"/></svg><i></i></button><button class="account-avatar" aria-label="Scout account" data-action="account">TK</button></div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="site-footer"><div class="footer-inner"><a class="footer-brand" href="#home">HIDDEN TALENT<span>See the player. Imagine the future.</span></a><span>Football scouting, with a different perspective.</span><small>UI CONCEPT · FICTIONAL PLAYER DATA</small></div></footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <dialog id="player-picker"><div class="dialog-heading"><div><span class="eyebrow">BUILD YOUR COMPARISON</span><h2>Select a player</h2></div><button class="icon-button" data-action="close-dialog" aria-label="Close player selection"><svg class="icon"><use href="#i-close"/></svg></button></div><div id="picker-list"></div></dialog>
+</body>
+</html>

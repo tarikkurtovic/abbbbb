@@ -1,0 +1,8 @@
+Use case: photorealistic-natural.
+Asset type: one football scouting website portrait sprite sheet, exactly 3 columns by 2 rows of 6 equally sized square cells in a landscape 3:2 composition.
+Primary request: six different fictional young adult male football players, all clearly age 18-22, professional club studio photography. Each square contains ONE separate individual, front facing, from head to waist, with the entire head and shoulders visible and hands below frame. Each individual must be centered at the EXACT center of their cell with plenty of padding so no person crosses into another cell.
+Subjects in reading order: 1. fair Southern European man with short dark wavy hair; 2. Black West African man with short natural textured hair; 3. Balkan man with short brown hair; 4. Brazilian man with short curly dark hair; 5. fair Scandinavian man with swept light blond hair; 6. North African man with dark cropped hair.
+Clothing: matching clean deep burgundy red soccer jerseys with ivory white sleeves, subtle collar, fine fabric detail. No sponsors, no crests, no text, no jersey numbers.
+Lighting: soft even studio light, premium official football team portrait quality, realistic anatomy, relaxed confident expressions.
+Background: genuinely transparent alpha across entire sheet behind each player, no shadows, no panels, no divider lines, no text, no watermark.
+The sheet will be displayed by CSS at background-size 300% 200%, so equal grid spacing and same scale across all 6 players are critical.
