@@ -19,4 +19,14 @@ Edit app.js for records and lineup positions, lineup.css for the homepage, style
 
 Pitch dimensions follow [IFAB Law 1](https://www.theifab.com/laws/latest/the-field-of-play/). The XAMPP dashboard and server configuration are preserved.
 
-Player profiles show current ability, potential ability and each key attribute using the same five-star display scale with half stars. Potential stars match the homepage cards. Wine-coloured stars denote current ability and attributes, while gold denotes potential. Ratings are a presentation of the fictional sample data; match statistics remain quantitative. Profile-specific styles are in ratings.css.
+Player profiles show six numeric attributes on a 0–100 scale. Current and potential ability each show a calculated OVR and a five-star summary with half stars. Potential stars match the homepage cards. Wine-coloured stars denote current ability and attributes, while gold denotes potential. Ratings are a presentation of the fictional sample data; match statistics remain quantitative. Profile-specific styles are in ratings.css.
+
+## Derived OVR and development forecast
+
+Outfield attributes are Pace, Shooting, Passing, Dribbling, Defending and Physical. Goalkeepers use Reflexes, Handling, Distribution, Positioning, Aerial reach and Decisions. Current OVR is the rounded sum of the six attributes multiplied by position weights; the weights for every position sum to one. The model and weights are in calculateRatings and ratingWeights in app.js.
+
+The illustrative development gain uses age, the three strongest attributes and sample playing time: round((23 - age) * 1.1 + max(0, top-three average - 75) * 0.12 + min(minutes / 1800, 1) * 1.5), clamped to 3–12. Projected attributes add this gain and cap at 99. Potential OVR applies the same position weights to those projected attributes. The radar uses these actual projected values. Ability stars use the same shared conversion everywhere. This is a deterministic UI demonstration with fictional data, not a validated scouting predictor.
+
+## Estimated secondary positions
+
+Profile ability summaries display stars only; numeric attributes and calculated ratings remain the data source. positionSuggestions checks related roles, minimum current-attribute gates, position-weighted fit, preferred foot, build and an applicable cuts-inside trait. It deducts a small unfamiliarity allowance, requires a fit close to the natural-role OVR, and returns at most two alternatives. Preferred foot adjusts the ranking after attribute gates; it cannot qualify a player by itself. Goalkeeper attributes never infer outfield roles. The pitch and explanations use the same results. These are illustrative suitability estimates, not evidence of positional experience.

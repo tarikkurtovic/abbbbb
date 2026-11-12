@@ -41,3 +41,41 @@
  .potential-badge .catalog-potential .potential-star{width:10px;height:10px}
  .potential-badge small{font-size:5px;letter-spacing:.35px}
 }
+
+/* Numeric attributes drive the current OVR and projected ceiling. */
+.ability-result{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.profile-scores .ability-result strong{font-family:Barlow,Impact,sans-serif;font-size:29px;line-height:1;color:var(--wine)}
+.profile-scores .ability-result em{font-family:var(--font);font-size:7px;font-style:normal;letter-spacing:.6px;margin-left:5px;color:#978c90}
+.profile-scores .potential .ability-result strong{color:#a07c40}
+.profile-columns .attribute-row{gap:12px}
+.profile-columns .attribute-row>.attribute-name{flex:0 0 85px}
+.attribute-ovr-bar{height:5px;flex:1;background:#edeae7;border-radius:4px;overflow:hidden}
+.attribute-ovr-bar i{display:block;height:100%;background:#9aa98c;border-radius:4px}
+.profile-columns .attribute-row .attribute-ovr{width:27px;font-size:14px;color:var(--wine);font-weight:800;text-align:right}
+.development-outlook{display:flex;align-items:center;justify-content:space-between;padding:12px;margin-top:16px;background:#f4f1ec;border-radius:4px;font-size:9px;color:#81776f}
+.development-outlook strong{color:#a07c40;font-size:12px}
+@media(max-width:680px){.ability-result{align-items:center}.profile-columns .attribute-row>.attribute-name{flex-basis:90px}}
+
+/* Suggested roles are based on the current profile, separately from potential. */
+.role-pitch{height:245px;margin-top:4px}
+.role-pitch .pitch-boundary{inset:14px}
+.role-pitch .pitch-boundary:after{width:30%;height:34px;left:35%;bottom:0;border:1px solid #c6d0ba;border-bottom:0;border-radius:0}
+.pitch-halfway{position:absolute;left:14px;right:14px;top:50%;height:1px;background:#c6d0ba}
+.pitch-halfway:after{content:'';position:absolute;width:50px;height:50px;border:1px solid #c6d0ba;border-radius:50%;left:calc(50% - 25px);top:-25px}
+.role-marker{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;font-size:9px;font-weight:800;z-index:2}
+.role-marker.natural{background:var(--wine);color:white;box-shadow:0 0 0 5px #831b2d17}
+.role-marker.alternative{background:#fff;border:2px solid #819574;color:#637859;box-shadow:0 0 0 4px #81957415}
+.role-legend{display:flex;gap:15px;flex-wrap:wrap;margin:13px 0;font-size:8px;color:#8c8288}
+.role-legend span{display:inline-flex;align-items:center;gap:6px}
+.role-legend i{height:7px;width:7px;background:var(--wine);border-radius:50%}
+.role-legend span+span i{background:#fff;border:2px solid #819574}
+.alternative-roles{border-top:1px solid var(--line);margin-top:16px;padding-top:15px}
+.alternative-roles h3{font-size:10px;color:#71656b;margin-bottom:10px}
+.role-option{padding:11px 0;border-bottom:1px solid #efedeb}
+.role-option-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.role-option-heading strong{font-size:10px;color:#637859;background:#edf1e9;padding:3px 7px;border-radius:3px}
+.role-option-heading span{font-size:8px;color:#87917e}
+.role-option p,.role-empty{font-size:9px;line-height:1.8;color:#91858d;margin-top:7px}
+.impact-panel .attribute-footnote{margin-top:14px}
+
+.profile-lower{align-items:start}
